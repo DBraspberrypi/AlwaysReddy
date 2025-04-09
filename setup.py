@@ -73,7 +73,8 @@ def install_dependencies(requirements_file):
 def install_linux_dependencies():
     package_managers = {
         'apt-get': ['sudo', 'apt-get', 'install', '-y', 'xclip', 'ffmpeg', 'portaudio19-dev'],
-        'pacman': ['sudo', 'pacman', '-Sy', 'xclip', 'ffmpeg', 'portaudio']
+        'pacman': ['sudo', 'pacman', '-Sy', 'xclip', 'ffmpeg', 'portaudio'],
+        'dnf': ['sudo', 'dnf', 'install', 'xclip', 'ffmpeg', 'portaudio-devel', 'python3-devel']
     }
 
     for manager, command in package_managers.items():
